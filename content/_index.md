@@ -1,1 +1,0 @@
-jMonkeyEngine is a free, open source game engine, made especially for Java game developers who want to create 3D games using modern technology. The software is programmed entirely in Java, intended for wide accessibility and quick deployment. 
