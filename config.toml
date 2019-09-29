@@ -6,8 +6,6 @@ theme = "ananke"
 googleAnalytics = ""
 enableRobotsTXT = true
 
-# sectionPagesMenu = "main"
-
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
