@@ -20,9 +20,12 @@
     </div>
   </header>
 
+  {{ partial "index-download.html" . }}
 
   <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center lh-copy mid-gray">
     {{ .Content }}
   </article>
+
+  {{ partial "index-contrib.html" . }}
 
 {{ end }}
