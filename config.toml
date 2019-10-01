@@ -13,7 +13,7 @@ enableRobotsTXT = true
 
 [params]
   favicon = ""
-  description = "A free open source game engine made especially for Java game developers."
+  description = "A cross-platform game engine for adventurous Java developers."
   facebook = ""
   twitter = ""
   instagram = ""
