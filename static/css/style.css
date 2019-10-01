@@ -7,15 +7,28 @@
 
 }
 
+html{
+    height: 100%;
+}
+
 body{
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif!important;
     background:#383838!important;
     color:#ababab!important;
+    min-height: 100%;
+    position: relative;
+    padding-bottom:6rem;
+   
 }
 
 article{
     max-width:1400px;
     margin:auto;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    left:0;
 }
 
 main{
@@ -84,8 +97,76 @@ header .pv6 {
 .getStarted{
     color: #222!important;
     background-color: #ffd700!important;
-    text-align:center!important;
+    padding:2rem;
+    text-align:center;
 
 }
 
+section {
+    display:block;
+    width:90%!important;
+    max-width:1400px;
+    margin:auto;
+    position:relative;
+}
 
+section.list {
+    text-align:center;
+    display:inline-block;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+section article{
+    background:#2b2b2b !important;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.2);
+    text-align:left;
+    display:block;
+
+    margin:auto;
+    margin:2rem;
+    padding:2rem!important;
+    position:relative;
+    padding-bottom:4em!important;
+}
+
+section.list article{
+    text-align:center;
+    flex-basis: 26%;
+
+}
+
+section article p{
+    text-align: left;
+}
+section article .readMore{
+    font-size:1.01rem;
+    font-weight: bold;
+}
+
+section article .meta{
+    position:absolute;
+    left:0;
+    bottom:1rem;
+    width:100%;
+    text-align:center;
+}
+
+section article h2{
+    color: #ffd700!important;
+}
+section article h2 a{
+    text-decoration: none;
+}
+
+section article h2 a:hover{
+    text-decoration: underline!important;
+}
+
+section article address{
+    text-align:center;
+}
+main{
+    padding-bottom:0!important;
+}

@@ -1,6 +1,6 @@
 ---
 menu: "main"
-title: "News"
+title: "Blog"
 type: "news"
 layout: "index"
 ---
