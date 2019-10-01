@@ -1,0 +1,34 @@
+name: Publish
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04    
+    steps: 
+    - name: Clone repo
+      run: |
+        git config --global user.name "GithubActions"
+        git config --global user.email "actions@robot.frk.wf"
+        git clone --single-branch  --recurse-submodules  --branch master https://github.com/${GITHUB_REPOSITORY}.git project
+        git clone --no-checkout --single-branch --branch gh-pages https://github.com/${GITHUB_REPOSITORY}.git generated
+    
+    - name: Build
+      run: |
+        cd project
+        HEADLESS=1 ./make.sh
+         
+    - name: Deploy     
+      run: |
+        shopt -s dotglob
+        cp -Rf project/public/* generated/
+        cd generated
+        git add *
+        git commit -m "Update data - `date`"        
+        header=$(echo -n "ad-m:${{ secrets.GITHUB_TOKEN }}" | base64)
+        (git -c http.extraheader="AUTHORIZATION: basic $header" push origin gh-pages --force || true)
+        exit 0
+
+        

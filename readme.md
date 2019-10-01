@@ -13,3 +13,11 @@ Executing the `hugo` command will compile and publish all files into the `./publ
 
 When you `push` changes to this repository the server will perform a `git pull` and `hugo` command
 to compile and publish the changes.
+
+## With docker or podman
+
+```bash
+git clone --recurse-submodules git@github.com:jMonkeyEngine/website.git jmewebsite
+cd jmewebsite
+./make.sh
+```
