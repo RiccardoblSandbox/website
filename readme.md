@@ -16,8 +16,18 @@ to compile and publish the changes.
 
 ## With docker or podman
 
+Clone:
 ```bash
 git clone --recurse-submodules git@github.com:jMonkeyEngine/website.git jmewebsite
 cd jmewebsite
+```
+
+Build:
+```bash
 ./make.sh
+```
+
+Test:
+```bash
+./make.sh server
 ```

@@ -3,9 +3,12 @@
 #   Usage:
 #   with defaults:
 #          ./make.sh
+#          ./make.sh server
 #   or:
-#         ARGS="-it" IMAGE="jmonkeyengine/buildenv-jme3:hugo" RUNTIME="docker" ./make.sh          
+#          ARGS="-it" IMAGE="jmonkeyengine/buildenv-jme3:hugo" RUNTIME="docker" ./make.sh          
+#          PORT="1313" ARGS="-it" IMAGE="jmonkeyengine/buildenv-jme3:hugo" RUNTIME="docker" ./make.sh   server
 #  ############ ############ ############ 
+
 
 if [ "$IMAGE" = "" ];
 then
@@ -17,7 +20,7 @@ groupUID=`id -g`
 
 if [ "$CMD" = "" ];
 then
-    CMD="hugo $@"
+    export CMD="hugo $@"
 fi
 
 if [ "$ARGS" = "" ];
@@ -43,4 +46,24 @@ then
     fi
 fi
 
-$RUNTIME run  -v"$PWD:$PWD" $RUN_AS -w $PWD $ARGS --rm $ARGS $IMAGE $CMD
+
+if [ "$PORT" = "" ];
+then
+    if [ "$CMD"  = "hugo server" ];
+    then
+        export PORT="1313"
+    fi
+fi
+
+if [ "$PORT" != "" ];
+then
+    export ARGS="$ARGS -p$PORT:1313"
+fi
+
+if [ "$CMD"  = "hugo server" ];
+then
+    export CMD="$CMD --bind 0.0.0.0"    
+fi
+
+set -x
+$RUNTIME run  -v"$PWD:$PWD" $RUN_AS -w $PWD $ARGS --rm $IMAGE $CMD
