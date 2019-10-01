@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 
-*{
-    color:unset!important;
-    font-family:unset!important;
 
-}
 
 html{
     height: 100%;
@@ -41,6 +37,9 @@ header  nav > div  > a:first-child {
     color: #ffd700!important;
     padding-left:3rem;
 }
+
+
+
 header  nav > div  > a:first-child:before {
     width:3.5rem;
     height:3.5rem;
@@ -102,6 +101,27 @@ header .pv6 {
 
 }
 
+.getStarted a:hover,.getStarted a:visited,.getStarted a{
+    background-color: #222!important;
+    border: 0.1rem solid #383838!important;
+    border-radius:0.5rem;
+
+    color:#ffd700;
+    padding:0.8rem;
+    padding-left:2rem;
+    padding-right:2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin:1rem;
+    display:inline-block;
+    transition:0.5s background-color;
+}
+
+.getStarted a:hover{
+    background-color: #383838!important;
+
+}
+
 section {
     display:block;
     width:90%!important;
@@ -153,14 +173,17 @@ section article .meta{
     text-align:center;
 }
 
-section article h2{
+section article h2,section article h1,section article h3{
     color: #ffd700!important;
 }
-section article h2 a{
+section article h2 a,section article h1 a,section article h3 a{
     text-decoration: none;
 }
+section article h2 a:visited,section article h1 a:visited,section article h3 a:visited{
+    color:unset!important;
+}
 
-section article h2 a:hover{
+section article h2 a:hover,section article h3 a:hover,section article h1 a:hover{
     text-decoration: underline!important;
 }
 
@@ -169,4 +192,12 @@ section article address{
 }
 main{
     padding-bottom:0!important;
+}
+
+section article a, section article a:hover{
+    color: #ffd700!important;
+}
+
+ section article a:visited{
+    color: #ff7b00!important;
 }
