@@ -36,4 +36,16 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://jmonkeyengine.org/start/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jmonkeyengine.org/license/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>
