@@ -12,6 +12,7 @@
 
 html{
     height: 100%;
+    width:100%;
 }
 
 body{
@@ -19,6 +20,7 @@ body{
     background:#383838!important;
     color:#ababab!important;
     min-height: 100%;
+    width: 100%;
     position: relative;
     padding-bottom:6rem;   
 }
@@ -58,7 +60,7 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
     box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
     margin:0;
     width:100%;
-
+    text-align: center;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -70,17 +72,19 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
 
 /* Everything has a margin, this will be important when wrapped*/
 .bar  > *{
+    display: inline-block;
     margin:1rem;
 }
 
 /* The first child is the title and will stay on the left */
 .bar > *:first-child{
     margin-right: auto;  
-    display:block;
+    display:inline-block;
 }
 
 /* If the width is too small, the content will wrap*/
-@media only screen and (max-width: 1000px) {
+
+@media only screen and (max-width: 1000px){
     header  > *:first-child{
         width: 100%;
         padding:0!important;
@@ -140,9 +144,9 @@ section article{
 /* A section.list is a section that contains multiple articles*/
 section.list {
     text-align:center;
-    display:inline-block; /*for browsers that don't support grid*/
-
+    display:block; /*for browsers that don't support grid*/
     display:grid;
+
     grid-auto-columns: 26rem;
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(auto-fit, minmax(120px,26rem));
@@ -151,10 +155,23 @@ section.list {
     justify-content: center;        
 }
 
-/* An article inside a section list*/
+/* Fallback for ancient browsers that do not support display grid*/
 section.list article{
-    flex-basis: 26rem;
+    display:block;
+    overflow:hidden;
 }
+@supports not (display:grid){
+    section.list article{
+        vertical-align:top;
+        height:36rem;
+        width:26rem;
+        display:inline-block;
+        margin:none;
+        padding:none;
+    }
+}
+
+
 
 /* Read more link inside the article*/
 section article .readMore{
@@ -165,17 +182,10 @@ section article .readMore{
 /* Article's meta data*/
 section article .meta{
     position:absolute;
-    left:0;
+    left:2rem;
     bottom:1rem;
     width:100%;
-    text-align:center;
 }
-
-/* Author infos*/
-section article address{
-    text-align:center;
-}
-
 
 
 /*
@@ -316,4 +326,6 @@ a.social.youtube:before{
     background-color: #383838!important;
 }
 
-
+section.list.features article{
+    text-align:center;
+}
