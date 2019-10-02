@@ -1,0 +1,11 @@
+
+{{ $paginator := .Paginator }}
+<section class="pagination">
+    {{ if $paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}"><i class="fas fa-caret-left"></i></a>
+    {{ end }}
+  Page  {{ $paginator.PageNumber }} of {{$paginator.TotalPages }}
+    {{ if $paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}"><i class="fas fa-caret-right"></i></a>
+    {{ end }}    
+</section>

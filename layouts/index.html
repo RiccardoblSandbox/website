@@ -11,11 +11,61 @@
 
 </div>
 
-
 <div id="getStarted">
     {{ .Content }}
 </div>
+<hr>
+<hr>
 
+<section class="list compact">
+        {{ $paginator := .Paginator }}
+        {{ range first 3 $paginator.Pages }}
+            {{ partial "articlePreviewCompact.html" . }}      
+        {{ end }}
+</section>
 
+<hr>
+<hr>
 
-{{ partial "index-features.html" . }} {{ end }}
+<section  class="list showcase ">
+
+    <article class="cover"   style="background-image:url('/images/showcase/img1.jpg')">
+
+        <h2>Physically Based Rendering (PBR)</h2>
+
+        <br /> Create realistic beautiful materials that make your game look modern and professional.
+    </article>
+
+    <article class="cover" style="background-image:url('/images/showcase/img1.jpg')">
+        <h2>AppStates</h2>
+        <br /> AppStates are the building blocks for your application. They help you separate your application into logical parts and can be used to quickly extend the base application. They can also be reused in other applications so you will quickly
+        build your own library of AppStates and integrate publically available extensions easily into your application.
+    </article>
+
+    <article class="cover"  style="background-image:url('/images/showcase/img2.jpg')">
+        <h2>Filters and Effects</h2>
+        <br /> jME3 comes with a wide array of special effects, primarily through the use of post processor filters and particle emitters. These are the “smoke and mirrors” tricks that allow you to emulate the wondrous stuff of nature, such as water,
+        fog, light scattering and of course, explosions.
+    </article>
+
+    <article class="cover"   style="background-image:url('/images/showcase/img1.jpg')">
+
+        <h2>Fantastic Community</h2>
+        <br /> The jewel in jMonkey’s crown. Our community is second to none, and full of knowledgable helpful members.
+    </article>
+
+    <article class="cover" style="background-image:url('/images/showcase/img3.jpg')" >
+
+        <h2>Software Store</h2>
+        <br /> Browse the store for free assets created by the community. Sounds, models, textures, even tech demos are all available for free to download.
+    </article>
+
+    <article class="cover"   style="background-image:url('/images/showcase/img1.jpg')">
+
+        <h2>Fantastic Community</h2>
+        <br /> The jewel in jMonkey’s crown. Our community is second to none, and full of knowledgable helpful members.
+    </article>
+
+</section>
+
+{{ end }}

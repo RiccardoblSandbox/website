@@ -2,8 +2,8 @@
 title: "My Second Post"
 date: 2019-09-29T15:21:19+01:00
 draft: false
-type: "news"
-layout: "news"
+type: "blog"
+layout: "blog"
 authors:
     - "jayfella"
 

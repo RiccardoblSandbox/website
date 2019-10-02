@@ -1,7 +1,7 @@
 ---
 menu: "main"
 title: "Blog"
-type: "news"
+type: "blog"
 layout: "index"
 ---
 

@@ -1,0 +1,8 @@
+<article >
+  <span class="articleLabel">NEWS</span>
+  <div>
+        <h2> <a href="{{ .Permalink }}">{{ .Title }}</a> </h2>
+        <p>{{ .Summary | plainify | safeHTML }} {{ if .Truncated }} … <a class="readMore" href="{{ .Permalink }}">Read
+            More... </a> {{ end }} </p>
+        </div>
+      </article>

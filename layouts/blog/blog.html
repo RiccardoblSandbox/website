@@ -24,6 +24,12 @@
             {{ end }}
         {{ end }}
 
+        {{- range .Params.tags }}
+        {{- with $.Site.GetPage "taxonomyTerm" (printf "tags/%s" (urlize .)) }}
+          <a href="{{ .Permalink }}">{{ .Params.title }}</a>
+        {{ end }}
+        {{ end }}
+
     </article>
 
 </section>

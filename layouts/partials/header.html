@@ -8,9 +8,9 @@
                 <img class="optional" src="/images/new-logo.png"><a   href="{{ .Site.BaseURL }}"> {{ .Site.Title }}</a>
         </div>
             
-        {{ partial "site-navigation.html" . }}      
+        {{ partial "menu.html" . }}      
         <div class="socials optional">
-            {{ partialCached "social-follow.html" . }} 
+            {{ partialCached "socials.html" . }} 
         </div>
 </header>
   

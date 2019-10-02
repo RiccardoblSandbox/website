@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+
+<section class="list">
+{{ $paginator := .Paginator }}
+{{ range $paginator.Pages }}
+    {{ partial "articlePreview.html" . }}      
+{{ end }}
+</section>
+{{ partial "pagination.html" . }}
+
+{{ end }}
+

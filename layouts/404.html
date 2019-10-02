@@ -1,0 +1,13 @@
+
+{{ define "main" }} {{ $featured_image := .Param "featured_image"}}
+{{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+{{ $featured_image := (trim $featured_image "/") | absURL }}
+<article>
+  <h1>
+    This is not the page you were looking for
+  </h1>
+</article>
+
+
+
+{{ end }}
