@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Team on jMonkeyEngine</title>
-    <link>https://jmonkeyengine.org/team/</link>
+    <link>https://jme.sandbox.frk.wf/team/</link>
     <description>Recent content in Team on jMonkeyEngine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://jmonkeyengine.org/team/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jme.sandbox.frk.wf/team/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
