@@ -1,3 +1,7 @@
 [submodule "themes/ananke"]
 	path = themes/ananke
 	url = https://github.com/budparr/gohugo-theme-ananke.git
+[submodule "static/fontawesome"]
+	path = static/fontawesome
+	url = git@github.com:FortAwesome/Font-Awesome.git
+	branch = 5.11.2

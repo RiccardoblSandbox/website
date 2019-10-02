@@ -2,9 +2,8 @@
     <link rel="stylesheet" href="{{ . | absURL }}">
 {{- end }}
 
-<header>
-    <div class="{{ .Site.Params.background_color_class | default "bg-black" }}">
-        {{ partial "site-navigation.html" . }}
-    </div>
+<header  class="bar">
+        {{ partial "site-navigation.html" . }}      
+        {{ partialCached "social-follow.html" . }} 
 </header>
   

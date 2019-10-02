@@ -1,28 +1,30 @@
+<a id="siteTitle"  href="{{ .Site.BaseURL }}"> {{ .Site.Title }}</a>
+
 <nav>
-        <a id="siteTitle" href="{{ .Site.BaseURL }}"> {{ .Site.Title }}</a>
-        <div>
-            {{ partial "i18nlist.html" . }} {{ if .Site.Menus.main }}
-            <ul>
-                {{ range .Site.Menus.main }}
-                <li>
-                    <a href="{{ .URL }}" title="{{ .Name }} page">  {{ .Name }} </a>
-                </li>
+  {{ partial "i18nlist.html" . }} {{ if .Site.Menus.main }}
 
-                {{ end }}
+  <ul>
 
-                <li>
-                    <a href="https://hub.jmonkeyengine.org" title="Community">Community </a>
-                </li>
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}" title="{{ .Name }} page"> {{ .Name }} </a>
+    </li>
+    {{ end }}
 
-                <li>
-                    <a  href="https://wiki.jmonkeyengine.org" title="Learn"> Learn</a>
-                </li>
+    <li>
+      <a href="https://hub.jmonkeyengine.org" title="Community">Community </a>
+    </li>
 
-                <li>
-                  <a  href="https://jmonkeystore.com" title="Extensions">Extensions</a>
-                </li>
+    <li>
+      <a href="https://wiki.jmonkeyengine.org" title="Learn"> Learn</a>
+    </li>
 
-            </ul>
-            {{ end }}
-        </div>
+    <li>
+      <a href="https://jmonkeystore.com" title="Extensions">Extensions</a>
+    </li>
+
+  </ul>
+
+  {{ end }}
 </nav>
+
