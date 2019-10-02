@@ -82,22 +82,7 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
     display:inline-block;
 }
 
-/* If the width is too small, the content will wrap*/
 
-@media only screen and (max-width: 1000px){
-    .bar  > *{
-        width: 100%;
-        padding:0!important;
-        margin:0!important;
-        text-align: center;
-        margin:0.4rem!important;
-    }
-    
-    /* hide elements that have the class optional (it means we don't need them)*/
-    .bar .optional{
-        display:none;
-    }
-}
 
 /* ul-li inside bar are menus*/
 .bar   ul,.bar li{
@@ -154,16 +139,40 @@ section.list {
 
     grid-auto-columns: 26rem;
     grid-auto-rows: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(120px,26rem));
+    grid-template-columns: repeat(auto-fit, minmax(240px,26rem));
 
-    justify-items: center;
     justify-content: center;        
 }
+
+@media only screen and (max-width: 1000px),only  screen and (orientation:portrait){
+/* If the width is too small, the content will wrap*/
+    .bar  > *{
+        width: 100%;
+        padding:0!important;
+        margin:0!important;
+        text-align: center;
+        margin:0.4rem!important;
+    }
+    
+    /* hide elements that have the class optional (it means we don't need them)*/
+    .bar .optional{
+        display:none;
+    }
+    section.list {
+
+        grid-template-columns: repeat(auto-fit, 99vw);
+        grid-auto-rows: minmax(20vh,1fr);
+    
+    
+        }
+}
+
 
 /* Fallback for ancient browsers that do not support display grid*/
 section.list article{
     display:block;
     overflow:hidden;
+
 }
 @supports not (display:grid){
     section.list article{
@@ -282,6 +291,7 @@ a.social.youtube:before{
 
 
 #mainCover{   
+
     height:50vh;
 
     display:flex;
