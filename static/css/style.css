@@ -44,6 +44,11 @@ h2, h1, h3{
     color: #ffd700;
 }
 
+pre {
+    overflow: auto;
+}
+
+
 /*
 A bar is a component that extends for the whole width and contains a title on the left and some content on the right.
 The bar will automatically wrap into multiple lines whenever the width is too small.
