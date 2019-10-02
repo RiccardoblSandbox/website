@@ -1,7 +1,7 @@
 {{ define "main" }} {{ $featured_image := .Param "featured_image"}}
 {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
 {{ $featured_image := (trim $featured_image "/") | absURL }}
-<div id="cover" style="background-image: url('{{ $featured_image }}');">
+<div class="cover"  id="mainCover" style="background-image: url('{{ $featured_image }}');">
 
     <div>
         A free, open source game engine, made especially for Java game developers who want to create 3D games using
