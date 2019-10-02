@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>License on jMonkeyEngine</title>
-    <link>https://jme.sandbox.frk.wf/license/</link>
+    <link>https://jmonkeyengine.org/license/</link>
     <description>Recent content in License on jMonkeyEngine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://jme.sandbox.frk.wf/license/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jmonkeyengine.org/license/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

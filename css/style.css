@@ -94,6 +94,7 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
 .bar  nav ul,.bar nav li{
     all:unset;
     font-weight: bold;
+    display:inline-block;
     display:flex;
     flex-wrap: wrap;
     align-items: center;
@@ -207,6 +208,10 @@ header.bar  #siteTitle:before {
 @media only screen and (max-width: 1000px) { 
     header.bar  #siteTitle:before {
         background-image:none;
+    }
+
+    header.bar  nav.socials {
+        display:none;
     }
 }
 

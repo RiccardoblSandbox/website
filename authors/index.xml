@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on jMonkeyEngine</title>
-    <link>https://jme.sandbox.frk.wf/authors/</link>
+    <link>https://jmonkeyengine.org/authors/</link>
     <description>Recent content in Authors on jMonkeyEngine</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 29 Sep 2019 15:21:19 +0100</lastBuildDate>
     
-	<atom:link href="https://jme.sandbox.frk.wf/authors/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://jmonkeyengine.org/authors/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://jme.sandbox.frk.wf/authors/jayfella/</link>
+      <link>https://jmonkeyengine.org/authors/jayfella/</link>
       <pubDate>Sun, 29 Sep 2019 15:21:19 +0100</pubDate>
       
-      <guid>https://jme.sandbox.frk.wf/authors/jayfella/</guid>
+      <guid>https://jmonkeyengine.org/authors/jayfella/</guid>
       <description>Code butcherer Specialist. A development enthusiast with with a heavy client/server/web-based background. My fascination with maths is beautifully visualised with jMonkey.</description>
     </item>
     

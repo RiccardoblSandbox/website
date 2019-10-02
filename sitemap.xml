@@ -3,60 +3,60 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/team/</loc>
+    <loc>https://jmonkeyengine.org/team/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/</loc>
+    <loc>https://jmonkeyengine.org/</loc>
     <lastmod>2019-09-29T15:21:19+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/authors/jayfella/</loc>
+    <loc>https://jmonkeyengine.org/authors/jayfella/</loc>
     <lastmod>2019-09-29T15:21:19+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/authors/</loc>
+    <loc>https://jmonkeyengine.org/authors/</loc>
     <lastmod>2019-09-29T15:21:19+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/news/</loc>
+    <loc>https://jmonkeyengine.org/news/</loc>
     <lastmod>2019-09-29T15:21:19+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/news/my-second-post/</loc>
+    <loc>https://jmonkeyengine.org/news/my-second-post/</loc>
     <lastmod>2019-09-29T15:21:19+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/news/my-first-post/</loc>
+    <loc>https://jmonkeyengine.org/news/my-first-post/</loc>
     <lastmod>2019-09-29T15:19:19+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/start/</loc>
+    <loc>https://jmonkeyengine.org/start/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jme.sandbox.frk.wf/license/</loc>
+    <loc>https://jmonkeyengine.org/license/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
