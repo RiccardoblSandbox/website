@@ -1,203 +1,208 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
-
-
-
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif!important;
-    background:#383838!important;
-    color:#ababab!important;
+    background: #383838!important;
+    color: #ababab!important;
     min-height: 100%;
     position: relative;
-    padding-bottom:6rem;
-   
+    padding-bottom: 6rem;
 }
 
-article{
-    max-width:1400px;
-    margin:auto;
-}
-footer{
-    position:absolute;
-    bottom:0;
-    left:0;
+article {
+    max-width: 1400px;
+    margin: auto;
 }
 
-main{
-    background:unset;
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-header  nav > div  > a:first-child {
+main {
+    background: unset;
+}
+
+header nav>div>a:first-child {
     font-weight: bold;
-    font-size:2rem;
+    font-size: 2rem;
     color: #ffd700!important;
-    padding-left:3rem;
+    padding-left: 3rem;
 }
 
-
-
-header  nav > div  > a:first-child:before {
-    width:3.5rem;
-    height:3.5rem;
+header nav>div>a:first-child:before {
+    width: 3.5rem;
+    height: 3.5rem;
     background-image: url("/images/jme-logo-large.png");
     background-size: contain;
-    display:inline-block;
+    display: inline-block;
     content: '';
     background-repeat: no-repeat;
-    position:absolute;
-    left:1rem;
-    top:0.9rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.9rem;
 }
 
-header.cover{
-    color:rgb(236, 236, 236)!important;
-    text-shadow:0rem 0rem 0.6rem #000000
+header.cover {
+    color: rgb(236, 236, 236)!important;
+    text-shadow: 0rem 0rem 0.6rem #000000
 }
 
-.bg-white{
-    background:#2b2b2b!important;
-
+.bg-white {
+    background: #2b2b2b!important;
 }
 
 .author-avatar {
-    float:left;
+    float: left;
     margin-right: 10px;
     border-radius: 5em;
 }
 
-
 header .pb6-l {
-    padding-bottom:unset;
+    padding-bottom: unset;
 }
 
 header .pv6 {
-    padding-top:2rem;
-    padding-bottom:2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-
-.cover{
+.cover {
     background-position: center center;
 }
 
-.f4{
-    font-size:1rem;
+.f4 {
+    font-size: 1rem;
 }
 
-.bg-black{
-    background-color:#222;
-    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+.bg-black {
+    background-color: #222;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
 }
 
-.getStarted{
+.getStarted {
     color: #222!important;
     background-color: #ffd700!important;
-    padding:2rem;
-    text-align:center;
-
+    padding: 2rem;
+    text-align: center;
 }
 
-.getStarted a:hover,.getStarted a:visited,.getStarted a{
+.getStarted a:hover,
+.getStarted a:visited,
+.getStarted a {
     background-color: #222!important;
     border: 0.1rem solid #383838!important;
-    border-radius:0.5rem;
-
-    color:#ffd700;
-    padding:0.8rem;
-    padding-left:2rem;
-    padding-right:2rem;
+    border-radius: 0.5rem;
+    color: #ffd700;
+    padding: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-weight: bold;
     text-decoration: none;
-    margin:1rem;
-    display:inline-block;
-    transition:0.5s background-color;
+    margin: 1rem;
+    display: inline-block;
+    transition: 0.5s background-color;
 }
 
-.getStarted a:hover{
+.getStarted a:hover {
     background-color: #383838!important;
-
 }
 
 section {
-    display:block;
-    width:90%!important;
-    max-width:1400px;
-    margin:auto;
-    position:relative;
+    display: block;
+    width: 90%!important;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
 }
 
 section.list {
-    text-align:center;
-    display:inline-block;
-    display:flex;
+    text-align: center;
+    display: inline-block;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-}
-section article{
-    background:#2b2b2b !important;
-    box-shadow: 0 0 4px 2px rgba(0,0,0,.2);
-    text-align:left;
-    display:block;
-
-    margin:auto;
-    margin:2rem;
-    padding:2rem!important;
-    position:relative;
-    padding-bottom:4em!important;
 }
 
-section.list article{
-    text-align:center;
+section article {
+    background: #2b2b2b !important;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, .2);
+    text-align: left;
+    display: block;
+    margin: auto;
+    margin: 2rem;
+    padding: 2rem!important;
+    position: relative;
+    padding-bottom: 4em!important;
+}
+
+section.list article {
+    text-align: center;
     flex-basis: 26%;
-
 }
 
-section article p{
+section article p {
     text-align: left;
 }
-section article .readMore{
-    font-size:1.01rem;
+
+section article .readMore {
+    font-size: 1.01rem;
     font-weight: bold;
 }
 
-section article .meta{
-    position:absolute;
-    left:0;
-    bottom:1rem;
-    width:100%;
-    text-align:center;
+section article .meta {
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
 }
 
-section article h2,section article h1,section article h3{
+section article h2,
+section article h1,
+section article h3 {
     color: #ffd700!important;
 }
-section article h2 a,section article h1 a,section article h3 a{
+
+section article h2 a,
+section article h1 a,
+section article h3 a {
     text-decoration: none;
 }
-section article h2 a:visited,section article h1 a:visited,section article h3 a:visited{
-    color:unset!important;
+
+section article h2 a:visited,
+section article h1 a:visited,
+section article h3 a:visited {
+    color: unset!important;
 }
 
-section article h2 a:hover,section article h3 a:hover,section article h1 a:hover{
+section article h2 a:hover,
+section article h3 a:hover,
+section article h1 a:hover {
     text-decoration: underline!important;
 }
 
-section article address{
-    text-align:center;
-}
-main{
-    padding-bottom:0!important;
+section article address {
+    text-align: center;
 }
 
-section article a, section article a:hover{
+main {
+    padding-bottom: 0!important;
+}
+
+section article a,
+section article a:hover {
     color: #ffd700!important;
 }
 
- section article a:visited{
+section article a:visited {
     color: #ff7b00!important;
+}
+
+pre {
+    overflow: auto;
 }
