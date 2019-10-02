@@ -66,7 +66,6 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
     align-items: center;
     justify-content: center;    
     flex-wrap: wrap;
-    padding:0.8rem;
     position:relative;
 }
 
@@ -74,6 +73,7 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
 .bar  > *{
     display: inline-block;
     margin:1rem;
+
 }
 
 /* The first child is the title and will stay on the left */
@@ -85,17 +85,22 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
 /* If the width is too small, the content will wrap*/
 
 @media only screen and (max-width: 1000px){
-    header  > *:first-child{
+    .bar  > *{
         width: 100%;
         padding:0!important;
         margin:0!important;
         text-align: center;
-        
+        margin:0.4rem!important;
+    }
+    
+    /* hide elements that have the class optional (it means we don't need them)*/
+    .bar .optional{
+        display:none;
     }
 }
 
-/* ul-li inside a nav  are menus*/
-.bar  nav ul,.bar nav li{
+/* ul-li inside bar are menus*/
+.bar   ul,.bar li{
     all:unset;
     font-weight: bold;
     display:inline-block;
@@ -106,7 +111,7 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
     height:100%;
 }
 
-.bar  nav li{
+.bar   li{
     margin-right:0.5rem;
     margin-left:0.5rem;
     font-size: 1.2rem;
@@ -197,28 +202,28 @@ header.bar  #siteTitle {
     font-weight: bold;
     font-size:2rem;
     color: #ffd700!important;
-    padding-left:3rem;
     text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
 }
 
-header.bar  #siteTitle:before {
-    width:3.5rem;
-    height:3.5rem;
-    background-image: url("/images/jme-logo-large.png");
-    background-size: contain;
-    display:inline-block;
-    content: '';
-    background-repeat: no-repeat;
-    position:absolute;
-    left:0.5rem;
-    top:0.9rem;
+header.bar  #siteTitle img {
+    height:4rem;    
+    pointer-events: none;
 }
+
+header.bar  #siteTitle a {
+    padding-left:1rem;
+
+}
+
+
 
 /* for small screens, remove the logo*/
 @media only screen and (max-width: 1000px) { 
-    header.bar  #siteTitle:before {
-        background-image:none;
-    }
+    
 
     header.bar  nav.socials {
         display:none;

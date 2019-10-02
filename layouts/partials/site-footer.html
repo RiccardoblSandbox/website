@@ -1,6 +1,8 @@
 <footer class="bar">
         <a  href="{{ .Site.BaseURL }}" >&copy; {{ now.Format "2006" }} {{ .Site.Title }} </a>
-         {{ partial "social-follow.html" . }}
+        <div class="socials">
+             {{ partial "social-follow.html" . }}
+            </div>
 </footer>
 
       
