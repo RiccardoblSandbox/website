@@ -3,5 +3,5 @@
 	url = https://github.com/budparr/gohugo-theme-ananke.git
 [submodule "static/fontawesome"]
 	path = static/fontawesome
-	url = git@github.com:FortAwesome/Font-Awesome.git
+	url = https://github.com/FortAwesome/Font-Awesome.git
 	branch = 5.11.2
