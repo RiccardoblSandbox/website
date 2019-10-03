@@ -10,9 +10,10 @@
 
   <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
-  {{ range .Site.Params.custom_css }}
-  <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) }}{{ . }}">
-  {{ end }}
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) }}{{ . }}">
+    {{ end }}
+
 
   {{ block "favicon" . }}
   <link rel="shortcut icon" href="/{{ .Site.Params.favicon }}" type="image/x-icon" />

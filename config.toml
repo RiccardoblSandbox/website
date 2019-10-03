@@ -1,4 +1,4 @@
-baseURL = "https://jmonkeyengine.org/"
+baseURL = "https://jme.sandbox.frk.wf/"
 languageCode = "en-us"
 title = "jMonkeyEngine"
 paginate=9
@@ -20,6 +20,7 @@ enableRobotsTXT = true
   youtube = ""
   github = "https://github.com/jMonkeyEngine/jmonkeyengine"
   discord = "https://discord.gg/JdjhsRw"
+  discourse="https://hub.jmonkeyengine.org/"
   featured_image = "/images/header.webp"
   recent_posts_number = 2
 

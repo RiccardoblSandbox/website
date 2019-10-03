@@ -9,7 +9,9 @@
 */
 
 
+
 html{
+    color:var(--darkGray);
     height: 100%;
     width:100%;
     position:absolute;
@@ -168,6 +170,30 @@ section.list {
 
     justify-content: center;        
 }
+
+section.list article{
+    transition: 0.6s transform,0.6s filter;
+    opacity:1;
+    transform: rotate(0deg);
+    filter: brightness(100%);
+    cursor: pointer;
+}
+
+article{
+    animation: 0.2s linear fadeIn;
+}
+
+@keyframes fadeIn{
+    0%{ opacity:0;}
+    100%{opacity:1;}
+    
+}
+
+section.list article:hover{
+    transform: rotate(2deg);
+    filter:brightness(120%);
+}
+
 
 section article .articleLabel{
     position:absolute;
@@ -406,3 +432,5 @@ a.social.youtube:before{
 #getStarted a:hover{
     background-color: #383838!important;
 }
+
+ 

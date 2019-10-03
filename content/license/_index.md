@@ -11,6 +11,8 @@ jMonkeyEngine is licensed under the very permissive [BSD 3-Clause License](https
 
  If you are unsure what this license means for you, always consult a legal professional.
 
+--------
+
 Copyright (c) 2009-2019 jMonkeyEngine
 All rights reserved.
 
