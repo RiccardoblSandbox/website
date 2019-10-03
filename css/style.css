@@ -8,12 +8,17 @@
 @@@@@@@@@@
 */
 
-* { box-sizing: border-box;}
+
 
 html{
+    color:var(--darkGray);
     height: 100%;
     width:100%;
+    position:absolute;
+    top:0;
+    left:0;
 }
+* { box-sizing: border-box;}
 
 body{
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif!important;
@@ -23,6 +28,10 @@ body{
     width: 100%;
     position: relative;
     padding-bottom:6rem;   
+    margin:0;
+    padding:0;
+    padding-bottom:6rem;
+
 }
 
 /* generic links look like text*/
@@ -43,7 +52,16 @@ p a:visited{
 }
 
 h2, h1, h3{
+    margin:0;
+    padding:0;
     color: #ffd700;
+}
+
+hr {
+    color: transparent;
+    border: 0.1rem double #222;
+    max-width: 30%;
+
 }
 
 pre {
@@ -66,7 +84,6 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
     align-items: center;
     justify-content: center;    
     flex-wrap: wrap;
-    padding:0.8rem;
     position:relative;
 }
 
@@ -74,6 +91,7 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
 .bar  > *{
     display: inline-block;
     margin:1rem;
+
 }
 
 /* The first child is the title and will stay on the left */
@@ -82,20 +100,10 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
     display:inline-block;
 }
 
-/* If the width is too small, the content will wrap*/
 
-@media only screen and (max-width: 1000px){
-    header  > *:first-child{
-        width: 100%;
-        padding:0!important;
-        margin:0!important;
-        text-align: center;
-        
-    }
-}
 
-/* ul-li inside a nav  are menus*/
-.bar  nav ul,.bar nav li{
+/* ul-li inside bar are menus*/
+.bar   ul,.bar li{
     all:unset;
     font-weight: bold;
     display:inline-block;
@@ -106,7 +114,7 @@ The bar will automatically wrap into multiple lines whenever the width is too sm
     height:100%;
 }
 
-.bar  nav li{
+.bar   li{
     margin-right:0.5rem;
     margin-left:0.5rem;
     font-size: 1.2rem;
@@ -124,8 +132,8 @@ section {
     max-width:1400px;
     margin:auto;
     position:relative;
-    padding-top:2rem;
 }
+
 
 /* An article inside a section*/
 section article{
@@ -140,6 +148,15 @@ section article{
 }
 
 
+section.pagination{
+    text-align: center;
+    font-size:1.2rem;
+}
+
+section.pagination a{
+    color: #ffd700;
+
+}
 
 /* A section.list is a section that contains multiple articles*/
 section.list {
@@ -149,16 +166,99 @@ section.list {
 
     grid-auto-columns: 26rem;
     grid-auto-rows: 1fr;
-    grid-template-columns: repeat(auto-fit, minmax(120px,26rem));
+    grid-template-columns: repeat(auto-fit, minmax(240px,26rem));
 
-    justify-items: center;
     justify-content: center;        
 }
+
+section.list article{
+    transition: 0.6s transform,0.6s filter;
+    opacity:1;
+    transform: rotate(0deg);
+    filter: brightness(100%);
+    cursor: pointer;
+}
+
+article{
+    animation: 0.2s linear fadeIn;
+}
+
+@keyframes fadeIn{
+    0%{ opacity:0;}
+    100%{opacity:1;}
+    
+}
+
+section.list article:hover{
+    transform: rotate(2deg);
+    filter:brightness(120%);
+}
+
+
+section article .articleLabel{
+    position:absolute;
+    top:0.5rem;
+    right:0.5rem;
+    background-color:#ffd700;
+    color:#222;
+    padding:0.3rem;
+    margin:0;
+    border-radius: 0.3rem;
+    border: 0.1rem dashed #222;
+    text-shadow: unset;
+    font-weight: bold;
+}
+section.list.compact{
+    grid-auto-rows: 12rem;
+    overflow:hidden;
+}
+
+section.list.compact article{
+    position:relative;
+}
+section.list.compact article div {
+    height:100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+section.list.compact .meta{
+    display:none;
+}
+
+
+
+
+
+@media only screen and (max-width: 1000px),only  screen and (orientation:portrait){
+/* If the width is too small, the content will wrap*/
+    .bar  > *{
+        width: 100%;
+        padding:0!important;
+        margin:0!important;
+        text-align: center;
+        margin:0.4rem!important;
+    }
+    
+    /* hide elements that have the class optional (it means we don't need them)*/
+    .bar .optional{
+        display:none;
+    }
+    section.list {
+
+        grid-template-columns: repeat(auto-fit, 99vw);
+        grid-auto-rows: minmax(20vh,1fr);
+    
+    
+        }
+}
+
 
 /* Fallback for ancient browsers that do not support display grid*/
 section.list article{
     display:block;
     overflow:hidden;
+
 }
 @supports not (display:grid){
     section.list article{
@@ -197,33 +297,26 @@ header.bar  #siteTitle {
     font-weight: bold;
     font-size:2rem;
     color: #ffd700!important;
-    padding-left:3rem;
     text-decoration: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
 }
 
-header.bar  #siteTitle:before {
-    width:3.5rem;
-    height:3.5rem;
-    background-image: url("/images/jme-logo-large.png");
-    background-size: contain;
-    display:inline-block;
-    content: '';
-    background-repeat: no-repeat;
-    position:absolute;
-    left:0.5rem;
-    top:0.9rem;
+header.bar  #siteTitle img {
+    height:4rem;    
+    pointer-events: none;
 }
 
-/* for small screens, remove the logo*/
-@media only screen and (max-width: 1000px) { 
-    header.bar  #siteTitle:before {
-        background-image:none;
-    }
+header.bar  #siteTitle a {
+    padding-left:1rem;
 
-    header.bar  nav.socials {
-        display:none;
-    }
 }
+
+
+
+
 
 footer.bar{
     position:absolute;
@@ -264,13 +357,26 @@ a.social.youtube:before{
     content:"\f431";
 }
 
+.cover{
+    text-shadow: 
+    0 0  0.6rem #000, 
+    0 0  0.6rem #000,
 
-#cover{
-    background-blend-mode: multiply;
-    background-color:rgba(0,0,0,0.3);
+    0 0  0.6rem #000;
+    
+    text-align:center;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    user-select: none;
+
+    font-weight: bold;
+    color:rgb(236, 236, 236)!important;
+
+}
+
+
+#mainCover{   
 
     height:50vh;
 
@@ -279,15 +385,12 @@ a.social.youtube:before{
     justify-content: center;
 
     text-align:center;
-    color:rgb(236, 236, 236)!important;
-    text-shadow:0rem 0rem 0.6rem #000000;
 
     font-size: calc(0.75em + 1vmin);
-    font-weight: bold;
-    user-select: none;
+
 }
 
-#cover > div{
+#mainCover > div{
     display:block;
     max-width:60vw;    
 }
@@ -296,6 +399,9 @@ a.social.youtube:before{
     float:left;
     margin-right: 10px;
     border-radius: 5em;
+    width:4rem;
+    height:4rem;
+    border-radius:10rem;
 }
 
 
@@ -303,6 +409,7 @@ a.social.youtube:before{
     color: #222!important;
     background-color: #ffd700!important;
     padding:2rem;
+    margin-bottom:1.5rem;
     text-align:center;
 }
 
@@ -326,6 +433,4 @@ a.social.youtube:before{
     background-color: #383838!important;
 }
 
-section.list.features article{
-    text-align:center;
-}
+ 
